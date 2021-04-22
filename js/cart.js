@@ -7,7 +7,7 @@ table.addEventListener('click', removeItemFromCart);
 let cart;
 
 function loadCart() {
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItems = JSON.parse(localStorage.getItem('items')) || [];
   cart = new Cart(cartItems);
 }
 
@@ -19,10 +19,19 @@ function renderCart() {
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
-function clearCart() {}
+function clearCart() {
+  let tbodyElem = document.getElementsByTagName('tbody')[0]; 
+  tbodyElem.innerHtml = ' ';
+
+}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
+  let tbodyElem = document.getElementsByTagName('tbody')[0]; 
+  for ()
+  let trElem = document.createElement('tr');
+  tbodyElem.appendChild(trElem);
+
 
   // TODO: Find the table body
 
