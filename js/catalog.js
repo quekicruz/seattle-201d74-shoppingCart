@@ -23,9 +23,8 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-  event.preventDefault();
-
   // TODO: Prevent the page from reloading
+  event.preventDefault();
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -38,8 +37,15 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
+  // Set variable that equals the value of the element with the id of 'items' 
+
+  let addItem = document.getElementById('items').value;
+
   // TODO: get the quantity
+  let itemQuantity = document.getElementById('quantity').value;
+
   // TODO: using those, add one item to the Cart
+  cart.addItem(addItem, itemQuantity);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
