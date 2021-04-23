@@ -1,5 +1,7 @@
 'use strict';
 
+let removeItemIndex = 0;
+
 // Cart constructor.
 const Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -16,21 +18,17 @@ Cart.prototype.saveToLocalStorage = function() {
   let stringifiedItems = JSON.stringify(this.items);
   // console.log(stringifiedItems);
   localStorage.setItem('items', stringifiedItems);
+
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
 
 };
 
-<<<<<<< HEAD
-
-Cart.prototype.removeItem = function(item) {
-=======
-Cart.prototype.removeItem = function() {
->>>>>>> 665836335d85cd84971432fa69bdd8ad62fc64c0
+Cart.prototype.removeItem = function(removeItemIndex) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  items.splice(removeItemIndex, 1)
 };
 
-// cart.splice(item)
 
 
 const CartItem = function(product, quantity) {
